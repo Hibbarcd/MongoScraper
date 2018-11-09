@@ -1,0 +1,58 @@
+body { 
+    background-image: url("africabg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 2px red;
+    text-align: center;
+    text-decoration: underline;
+}
+h2 {
+    font-size: 2em;
+    color: red;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+#wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+#articles {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  color: aliceblue;
+  text-shadow: 1px 1px black;
+  position: fixed;
+  left: 20%;
+  overflow: auto;
+  width: 60%;
+  height: 700px;
+}
+#notes {
+  position: relative;
+  border: 2px solid black;
+  float: left;
+  background: rgb(13,167,194);
+  background: radial-gradient(circle, rgba(13,167,194,1) 9%, rgba(144,151,145,1) 51%, rgba(122,132,232,0.9806062073266807) 89%);
+  width: 300px;
+  border-color: 3px solid red;
+}
+textarea, input {
+  display: block;
+  width: 98%;
+  background-color: #FCF5C7;
+}
+input {
+  height: 36px;
+  font-size: 24px;
+}
+textarea {
+  height: 100px;
+  width: 98%;
+  font-size: 14px;
+}
