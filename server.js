@@ -14,9 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewsScraper";
-mongoose.connect(MONGODB_URI);
-mongoose.connect("mongodb://localhost/NewsScraper", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewsScraper";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 //============Routes=============================================================
 // Route for Scraping
 app.get("/scrape", function(req, res) {
