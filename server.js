@@ -14,9 +14,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewsScraper";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewsScraper";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 //============Routes=============================================================
+app.get("/", function(req, res) {
+  db.Article.find({}), function (err, found) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      res.json(found);
+    }
+  };
+});
+    
 // Route for Scraping
 app.get("/scrape", function(req, res) {
   axios.get("https://www.kenyans.co.ke/news/").then((response) => {
