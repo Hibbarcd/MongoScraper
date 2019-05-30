@@ -36,12 +36,8 @@ app.get("/scrape", function(req, res) {
     $(".news-title-list").each(function(i, element) {
       let result = {};
 
-      result.title = $(this)
-        .children("a")
-        .text();
-      result.link = $(this)
-        .children("a")
-        .attr("href");
+      result.title = $(this).children("a").text();
+      result.link = $(this).children("a").attr("href");
 //============articles created from scrape results========================
       db.Article.create(result)
         .then((dbArticle) => {
